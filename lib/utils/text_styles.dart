@@ -24,7 +24,7 @@ abstract class AppTextStyles {
   static const TextStyle styleMedium16 = TextStyle(
       fontFamily: "Montserrat",
       fontSize: 16,
-      fontWeight: FontWeight.w500,
+      fontWeight: FontWeight.w600,
       color: Color(0xFF064061));
   static const TextStyle styleRegular14 = TextStyle(
       fontFamily: "Montserrat",

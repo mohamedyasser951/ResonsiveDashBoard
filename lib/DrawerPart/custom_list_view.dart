@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:responsive_dashboard/DrawerPart/active_inactive_drawer_item.dart';
+import 'package:responsive_dashboard/DrawerPart/dawer_item.dart';
 import 'package:responsive_dashboard/Models/drawer_item_model.dart';
 import 'package:responsive_dashboard/utils/app_images.dart';
 
@@ -34,11 +33,10 @@ class _CustomDrawerItemListViewState extends State<CustomDrawerItemListView> {
                 }
               },
               child: Padding(
-                padding: const EdgeInsets.only(top: 20.0),
-                child: index == activeIndex
-                    ? ActiveDrawerItem(drawerItemModel: items[index])
-                    : InActiveDrawerItem(drawerItemModel: items[index]),
-              ),
+                  padding: const EdgeInsets.only(top: 20.0),
+                  child: DrawerItem(
+                      drawerItemModel: items[index],
+                      isActive: index == activeIndex)),
             ));
   }
 }
