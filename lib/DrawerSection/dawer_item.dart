@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/DrawerPart/active_inactive_drawer_item.dart';
+import 'package:responsive_dashboard/DrawerSection/active_inactive_drawer_item.dart';
 
 import 'package:responsive_dashboard/Models/drawer_item_model.dart';
 
