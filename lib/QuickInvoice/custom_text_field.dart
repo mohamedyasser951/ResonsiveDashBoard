@@ -10,13 +10,14 @@ class CutomTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  TextField(
-        decoration: InputDecoration(
-            hintText: hintText,
-            filled: true,
-            fillColor: const Color(0xFFAAAAAA),
-            border:
-                OutlineInputBorder(borderRadius: BorderRadius.circular(12.0))),
-        );
+    return TextField(
+      decoration: InputDecoration(
+          hintText: hintText,
+          filled: true,
+          fillColor: const Color(0xFFFAFAFA),
+          border: OutlineInputBorder(
+              borderSide: BorderSide.none,
+              borderRadius: BorderRadius.circular(12.0))),
+    );
   }
 }

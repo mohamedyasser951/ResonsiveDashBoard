@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/dash_board_desktop_layout.dart';
+import 'package:responsive_dashboard/dash_board_mobile_layout.dart';
+import 'package:responsive_dashboard/dash_board_tablet_layout.dart';
 import 'package:responsive_dashboard/responsive_dash_board.dart';
 
 void main() {
@@ -17,8 +19,8 @@ class App extends StatelessWidget {
       home: Scaffold(
         backgroundColor: const Color(0xFFF7F9FA),
         body: ResponsiveDashBoardBuilder(
-          mobileLayout: (context) => const SizedBox(),
-          tabletLayout: (context) => const SizedBox(),
+          mobileLayout: (context) => const DashBoardMobileLayout(),
+          tabletLayout: (context) => const DashBoardTabletLayout(),
           deskTopLayout: (context) => const DashBoardDesktopLayout(),
         ),
       ),

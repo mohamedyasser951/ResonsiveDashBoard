@@ -23,6 +23,7 @@ class ChartDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      shrinkWrap: true,
       itemCount: chartDetailsItems.length,
       itemBuilder: (context, index) =>
           ChartDetailsItem(model: chartDetailsItems[index]),

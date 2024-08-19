@@ -10,13 +10,13 @@ class TransactionAndIncomeSection extends StatelessWidget {
     return const Column(
       children: [
         SizedBox(
-          height: 18.0,
+          height: 12.0,
         ),
         CardAndTransactionSection(),
         SizedBox(
           height: 12.0,
         ),
-        IncomeSection(),
+        Expanded(child: IncomeSection()),
       ],
     );
   }

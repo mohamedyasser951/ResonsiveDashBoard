@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/QuickInvoice/custom_button.dart';
+import 'package:responsive_dashboard/QuickInvoice/custom_title_text_field.dart';
 import 'package:responsive_dashboard/utils/text_styles.dart';
 
 class QuickInvoiceForm extends StatelessWidget {
@@ -10,27 +11,38 @@ class QuickInvoiceForm extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // Row(
-        //   children: [
-        //     Expanded(
-        //         child: CustomTitleTextField(
-        //             title: "Customer name", hintText: "Type customer name")),
-        //     Expanded(
-        //         child: CustomTitleTextField(
-        //             title: "Customer Email", hintText: "Type customer email")),
-        //   ],
-        // ),
-        // Row(
-        //   children: [
-        //     Expanded(
-        //         child: CustomTitleTextField(
-        //             title: "Customer name", hintText: "Type customer name")),
-        //     Expanded(
-        //         child: CustomTitleTextField(
-        //             title: "Customer Email", hintText: "Type customer email")),
-        //   ],
-        // ),
-
+        const Row(
+          children: [
+            Expanded(
+                child: CustomTitleTextField(
+                    title: "Customer name", hintText: "Type customer name")),
+            SizedBox(
+              width: 12,
+            ),
+            Expanded(
+                child: CustomTitleTextField(
+                    title: "Customer Email", hintText: "Type customer email")),
+          ],
+        ),
+        const SizedBox(
+          height: 12,
+        ),
+        const Row(
+          children: [
+            Expanded(
+                child: CustomTitleTextField(
+                    title: "Item name", hintText: "Type customer name")),
+            SizedBox(
+              width: 12,
+            ),
+            Expanded(
+                child:
+                    CustomTitleTextField(title: "Item mount", hintText: "USD")),
+          ],
+        ),
+        const SizedBox(
+          height: 12,
+        ),
         Row(
           children: [
             Expanded(

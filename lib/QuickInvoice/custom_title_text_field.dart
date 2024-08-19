@@ -22,7 +22,7 @@ class CustomTitleTextField extends StatelessWidget {
           style: AppTextStyles.styleMedium16,
         ),
         const SizedBox(
-          height: 10.0,
+          height: 4.0,
         ),
         CutomTextField(hintText: hintText),
       ],

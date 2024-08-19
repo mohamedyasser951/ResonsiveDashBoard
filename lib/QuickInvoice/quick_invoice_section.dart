@@ -9,9 +9,9 @@ class QuickInvoiceSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(12.0),
+      padding: const EdgeInsets.all(8.0),
       decoration: BoxDecoration(
-          border: Border.all(width: 0.1),
+          border: null,
           color: Colors.white,
           borderRadius: BorderRadius.circular(12.0)),
       child: Column(
@@ -27,10 +27,10 @@ class QuickInvoiceSection extends StatelessWidget {
           ),
           LatestTransactionBuilder(),
           const Divider(
-            height: 48,
+            height: 32,
           ),
           const SizedBox(
-            height: 10.0,
+            height: 8.0,
           ),
           const QuickInvoiceForm(),
         ],

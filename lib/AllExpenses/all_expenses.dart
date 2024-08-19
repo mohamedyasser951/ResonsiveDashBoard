@@ -9,15 +9,14 @@ class AllExpenses extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      
-      padding: const EdgeInsets.all(20.0),
+      padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
       decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(12.0)),
       child: const Column(
         children: [
           AllExpensesHeader(),
           SizedBox(
-            height: 16.0,
+            height: 12.0,
           ),
           ExpenseListBuilder(),
         ],
