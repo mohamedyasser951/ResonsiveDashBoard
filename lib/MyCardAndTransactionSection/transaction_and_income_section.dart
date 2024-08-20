@@ -10,7 +10,7 @@ class TransactionAndIncomeSection extends StatelessWidget {
     return const Column(
       children: [
         SizedBox(
-          height: 12.0,
+          height: 0.0,
         ),
         CardAndTransactionSection(),
         SizedBox(

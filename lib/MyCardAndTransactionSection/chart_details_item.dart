@@ -14,13 +14,14 @@ class ChartDetailsItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: Container(
-        width: 6,
-        height: 6,
+        width: 5,
+        height: 5,
         decoration: BoxDecoration(color: model.color, shape: BoxShape.circle),
       ),
       title: Text(
         model.title,
-        style: AppTextStyles.styleReqular16,
+        style: AppTextStyles.styleReqular16
+            .copyWith(fontSize: 13.0, fontWeight: FontWeight.bold),
       ),
       trailing: Text(
         model.precentage,
