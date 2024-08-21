@@ -15,9 +15,13 @@ class ActiveDrawerItem extends StatelessWidget {
         width: 3.27,
         color: const Color(0xFF4EB7F2),
       ),
-      title: Text(
-        drawerItemModel.title,
-        style: AppTextStyles.styleBold16,
+      title: FittedBox(
+        alignment: AlignmentDirectional.centerStart,
+        fit: BoxFit.scaleDown,
+        child: Text(
+          drawerItemModel.title,
+          style: AppTextStyles.styleBold16(context),
+        ),
       ),
     );
   }
@@ -31,9 +35,13 @@ class InActiveDrawerItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: SvgPicture.asset(drawerItemModel.image),
-      title: Text(
-        drawerItemModel.title,
-        style: AppTextStyles.styleReqular16,
+      title: FittedBox(
+        alignment: AlignmentDirectional.centerStart,
+        fit: BoxFit.scaleDown,
+        child: Text(
+          drawerItemModel.title,
+          style: AppTextStyles.styleRegular16(context),
+        ),
       ),
     );
   }

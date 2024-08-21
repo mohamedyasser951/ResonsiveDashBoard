@@ -16,7 +16,7 @@ class ActiveExpenseItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(12.0),
+      padding:  EdgeInsets.all(12.0),
       decoration: BoxDecoration(
           border: Border.all(width: 0.1, color: Colors.grey),
           color: isActive ? const Color(0xFF4EB7F2) : Colors.white,
@@ -54,15 +54,15 @@ class ActiveExpenseItem extends StatelessWidget {
           Text(
             itemModel.title,
             style: isActive
-                ? AppTextStyles.styleBold16.copyWith(color: Colors.white)
-                : AppTextStyles.styleBold16,
+                ? AppTextStyles.styleBold16(context).copyWith(color: Colors.white)
+                : AppTextStyles.styleBold16(context),
           ),
           const SizedBox(
             height: 8,
           ),
           Text(
             itemModel.date,
-            style: AppTextStyles.styleRegular14,
+            style: AppTextStyles.styleRegular14(context),
           ),
           const SizedBox(
             height: 12,
@@ -70,8 +70,8 @@ class ActiveExpenseItem extends StatelessWidget {
           Text(
             itemModel.price,
             style: isActive
-                ? AppTextStyles.styleSemiBold24.copyWith(color: Colors.white)
-                : AppTextStyles.styleSemiBold24,
+                ? AppTextStyles.styleSemiBold24(context).copyWith(color: Colors.white)
+                : AppTextStyles.styleSemiBold24(context),
           ),
         ],
       ),

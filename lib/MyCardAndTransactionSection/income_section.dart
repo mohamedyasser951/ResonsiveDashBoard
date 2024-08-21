@@ -21,12 +21,12 @@ class IncomeSection extends StatelessWidget {
         child: Column(
           children: [
             const IncomeHeader(),
-            width >= SizesConfiq.desktopSize && width < 1476
+            width >= SizesConfiq.desktopSize && width < 1460
                 ? const Expanded(
                     child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: IncomeDetailedCharts(),
-                    ))
+                    padding: EdgeInsets.all(8.0),
+                    child: IncomeDetailedCharts(),
+                  ))
                 : const IncomeBody(),
             const SizedBox(
               height: 12.0,

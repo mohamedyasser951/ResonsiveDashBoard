@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/utils/text_styles.dart';
 import 'dart:math' as math;
@@ -12,21 +10,21 @@ class IncomeHeader extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        const Text(
+        Text(
           "Income",
-          style: AppTextStyles.styleSemiBold20,
+          style: AppTextStyles.styleMedium16(context),
         ),
         Container(
-          padding: const EdgeInsets.all(12.0),
+          padding: const EdgeInsets.all(8.0),
           decoration: BoxDecoration(
               border: Border.all(width: 0.1),
               color: Colors.white,
               borderRadius: BorderRadius.circular(12.0)),
           child: Row(
             children: [
-              const Text(
+              Text(
                 "Monthly",
-                style: AppTextStyles.styleMedium16,
+                style: AppTextStyles.styleMedium16(context),
               ),
               const SizedBox(
                 width: 24.0,

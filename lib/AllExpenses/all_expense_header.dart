@@ -10,9 +10,9 @@ class AllExpensesHeader extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        const Text(
+         Text(
           "All Expenses",
-          style: AppTextStyles.styleSemiBold20,
+          style: AppTextStyles.styleSemiBold20(context),
         ),
         Container(
           padding: const EdgeInsets.all(12.0),
@@ -22,9 +22,9 @@ class AllExpensesHeader extends StatelessWidget {
               borderRadius: BorderRadius.circular(12.0)),
           child: Row(
             children: [
-              const Text(
+               Text(
                 "Monthly",
-                style: AppTextStyles.styleMedium16,
+                style: AppTextStyles.styleMedium16(context),
               ),
               const SizedBox(
                 width: 24.0,

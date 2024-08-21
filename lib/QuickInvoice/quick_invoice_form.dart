@@ -49,7 +49,7 @@ class QuickInvoiceForm extends StatelessWidget {
                 child: CustomButton(
               widget: Text(
                 "Add more details",
-                style: AppTextStyles.styleMedium16
+                style: AppTextStyles.styleMedium16(context)
                     .copyWith(color: const Color(0xFF4EB7F2)),
               ),
               color: Colors.transparent,
@@ -62,7 +62,7 @@ class QuickInvoiceForm extends StatelessWidget {
               widget: Text(
                 "Send Money",
                 style:
-                    AppTextStyles.styleMedium16.copyWith(color: Colors.white),
+                    AppTextStyles.styleMedium16(context).copyWith(color: Colors.white),
               ),
               color: const Color(0xFF4EB7F2),
             )),

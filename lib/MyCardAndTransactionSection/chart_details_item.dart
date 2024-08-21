@@ -12,21 +12,25 @@ class ChartDetailsItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      leading: Container(
-        width: 5,
-        height: 5,
-        decoration: BoxDecoration(color: model.color, shape: BoxShape.circle),
-      ),
-      title: Text(
-        model.title,
-        style: AppTextStyles.styleReqular16
-            .copyWith(fontSize: 13.0, fontWeight: FontWeight.bold),
-      ),
-      trailing: Text(
-        model.precentage,
-        style: AppTextStyles.styleMedium16
-            .copyWith(color: const Color(0Xff208CC8)),
+    return SizedBox(
+      height: 40,
+      child: ListTile(
+        leading: Container(
+          width: 5,
+          height: 5,
+          decoration: BoxDecoration(color: model.color, shape: BoxShape.circle),
+        ),
+        title: Text(
+          model.title,
+          style: AppTextStyles.styleRegular16(context)
+              .copyWith(fontSize: 13.0, fontWeight: FontWeight.bold),
+        ),
+        trailing: Text(
+          model.precentage,
+          style: AppTextStyles.styleMedium16(context).copyWith(
+            color: const Color(0Xff208CC8),
+          ),
+        ),
       ),
     );
   }
