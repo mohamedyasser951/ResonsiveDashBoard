@@ -5,6 +5,13 @@ import 'package:responsive_dashboard/utils/app_images.dart';
 
 class ExpenseListBuilder extends StatefulWidget {
   const ExpenseListBuilder({super.key});
+
+  @override
+  State<ExpenseListBuilder> createState() => _ExpenseListBuilderState();
+}
+
+class _ExpenseListBuilderState extends State<ExpenseListBuilder> {
+  int activeItem = 0;
   static List<ExpenseItemModel> items = [
     ExpenseItemModel(
         image: Assets.imagesBalance,
@@ -22,47 +29,86 @@ class ExpenseListBuilder extends StatefulWidget {
         date: "April 2022",
         price: r"$20,129"),
   ];
-
-  @override
-  State<ExpenseListBuilder> createState() => _ExpenseListBuilderState();
-}
-
-class _ExpenseListBuilderState extends State<ExpenseListBuilder> {
-  int activeItem = 0;
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: ExpenseListBuilder.items.asMap().entries.map((e) {
-        int index = e.key;
-        if (index == 1) {
-          return Expanded(
-            child: GestureDetector(
-              onTap: () {
-                changeItemState(index = index);
-              },
-              child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12.0),
-              child: ExpenseItem(
-                itemModel: e.value,
-                isActive: index == activeItem,
-              ),
-            ),
-            ),
-          );
-        }
-        return Expanded(
+      children: [
+        Expanded(
           child: GestureDetector(
             onTap: () {
-                changeItemState(index = index);
-              },
+              changeItemState(0);
+            },
             child: ExpenseItem(
-              itemModel: e.value,
-              isActive: index == activeItem,
+              itemModel: items[0],
+              isActive: 0 == activeItem,
             ),
           ),
-        );
-      }).toList(),
+        ),
+        const SizedBox(
+          width: 6,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              changeItemState(1);
+            },
+            child: ExpenseItem(
+              itemModel: items[1],
+              isActive: 1 == activeItem,
+            ),
+          ),
+        ),
+        const SizedBox(
+          width: 6,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              changeItemState(2);
+            },
+            child: ExpenseItem(
+              itemModel: items[2],
+              isActive: 2 == activeItem,
+            ),
+          ),
+        ),
+        const SizedBox(
+          width: 6,
+        )
+      ],
     );
+    // return Row(
+    //   children: ExpenseListBuilder.items.asMap().entries.map((e) {
+    //     int index = e.key;
+    //     if (index == 1) {
+    //       return Expanded(
+    //         child: GestureDetector(
+    //           onTap: () {
+    //             changeItemState(index = index);
+    //           },
+    //           child: Padding(
+    //             padding: const EdgeInsets.symmetric(horizontal: 12.0),
+    //             child: ExpenseItem(
+    //               itemModel: e.value,
+    //               isActive: index == activeItem,
+    //             ),
+    //           ),
+    //         ),
+    //       );
+    //     }
+    //     return Expanded(
+    //       child: GestureDetector(
+    //         onTap: () {
+    //           changeItemState(index = index);
+    //         },
+    //         child: ExpenseItem(
+    //           itemModel: e.value,
+    //           isActive: index == activeItem,
+    //         ),
+    //       ),
+    //     );
+    //   }).toList(),
+    // );
   }
 
   void changeItemState(int newIndex) {

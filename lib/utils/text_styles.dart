@@ -76,8 +76,13 @@ double responsiveText(double baseFontSize, BuildContext context) {
 
 double getScaleValue({required BuildContext context}) {
   double width = MediaQuery.sizeOf(context).width;
+  // PlatformDispatcher platformDispatcher = PlatformDispatcher.instance;
+  // double physicalWidth = platformDispatcher.views.first.physicalSize.width;
+  // double devicePixelRatio = platformDispatcher.views.first.devicePixelRatio;
+  // double width = physicalWidth / devicePixelRatio;
+
   if (width < SizesConfiq.mobileSize) {
-    return width / 600;
+    return width / 420;
   } else if (width < SizesConfiq.desktopSize) {
     return width / 1000;
   } else {

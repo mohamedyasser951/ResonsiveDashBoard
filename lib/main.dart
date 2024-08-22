@@ -1,3 +1,4 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/DrawerSection/drawer.dart';
 import 'package:responsive_dashboard/dash_board_desktop_layout.dart';
@@ -6,7 +7,10 @@ import 'package:responsive_dashboard/dash_board_tablet_layout.dart';
 import 'package:responsive_dashboard/responsive_dash_board.dart';
 
 void main() {
-  runApp(const App());
+  runApp(DevicePreview(
+    enabled: true,
+    builder: (context) => const App(),
+  ));
 }
 
 class App extends StatefulWidget {
@@ -21,6 +25,8 @@ class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light(useMaterial3: true),
       home: Scaffold(
@@ -30,7 +36,7 @@ class _AppState extends State<App> {
             : null,
         appBar: MediaQuery.of(context).size.width < 800
             ? AppBar(
-                backgroundColor: const Color(0XFFFAFAFA ),
+                backgroundColor: const Color(0XFFFAFAFA),
                 leading: IconButton(
                     onPressed: () {
                       scaffoldKey.currentState!.openDrawer();
